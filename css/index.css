@@ -14,7 +14,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'Lato', sans-serif;
 }
 
 *:focus {
@@ -104,7 +104,7 @@ footer {
 .intro {
   position: relative;
   height: 100vh;
-  background-color: #42a6e0;
+  background-color: black;
 }
 
 .intro-video {
@@ -114,17 +114,21 @@ footer {
   object-fit: cover;
 }
 
-.intro-texts {
+.texts {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  color: white;
+}
+.quote-texts {
+  color: #353333;
 }
 
-.intro-title,
-.intro-subtitle {
-  color: white;
+.title,
+.subtitle {
   margin: 0;
   line-height: 1;
   font-size: calc(
@@ -132,11 +136,11 @@ footer {
       ((100vw - 400px) / (1600 - 400))
   );
 }
-.intro-subtitle {
+.subtitle {
   --min: 40;
   --max: 70;
 }
-.intro-title {
+.title {
   --min: 85;
   --max: 160;
   font-size: 85px;
@@ -151,11 +155,68 @@ footer {
   background-color: #262626;
 }
 .turqoise {
-  background-color: #38ced7;
+  background-color: #fff;
 }
 .brown {
   background-color: #a66f28;
 }
 .bordeaux {
   background-color: #953543;
+}
+
+.main-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em 3em;
+  z-index: 2;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav_link {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  margin-right: 3em;
+  font-weight: 700;
+  color: #353333;
+}
+
+.nav_link:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.5em;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.nav_link:hover:after {
+  opacity: 1;
+}
+
+.boceto-vectorial {
+  height: 100%;
+  object-fit: contain;
+}
+
+figcaption {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.3em;
 }

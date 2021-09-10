@@ -4,11 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>bikes</title>
+    <title>Bicicletas Fenómenas - A</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
@@ -31,21 +52,42 @@
     </section> -->
 
     <section class="intro">
+      <div class="main-nav">
+        <a href="/"><img src="./img/bike-logo.png" class="logo" /></a>
+        <nav class="nav">
+          <a href="#0" class="nav_link">Bocetos</a>
+          <a href="#0" class="nav_link">Experiencia</a>
+          <a href="#0" class="nav_link">Las bicis</a>
+          <a href="#0" class="nav_link">Y por qué?</a>
+        </nav>
+      </div>
       <video class="intro-video" autobuffer preload autoplay loop>
         <source type="video/webm" src="./video/intro.webm" />
         <source type="video/ogg" src="./video/intro.ogv" />
         <source type="video/mp4" src="./video/intro.mp4" />
       </video>
-      <div class="intro-texts">
-        <p class="intro-subtitle">Bicicletas</p>
-        <h1 class="intro-title">Fenómenas</h1>
+      <div class="texts">
+        <p class="subtitle">Bicicletas</p>
+        <h1 class="title">Fenómenas</h1>
       </div>
-      <h1 class="intro-title">Fenómenas</h1>
     </section>
+
     <div id="pinMaster">
       <div id="pinContainer">
-        <section class="panel dark">Pin Panel A</section>
-        <section class="panel turqoise">Pin Panel B</section>
+        <section class="panel white bocetos-vectorial">
+          <img src="./img/boceto-vectorial-2.png" class="boceto-vectorial" />
+          <img src="./img/boceto-vectorial-1.png" class="boceto-vectorial" />
+        </section>
+        <section class="panel turqoise">
+          <div class="texts quote-texts">
+            <figure class="subtitle">
+              <blockquote cite="https://www.huxley.net/bnw/four.html">
+                <p>Algo fuera de lo ordinario</p>
+              </blockquote>
+              <figcaption>—Iair, <cite>Castaneda</cite></figcaption>
+            </figure>
+          </div>
+        </section>
         <section class="panel bordeaux">Pin Panel C</section>
       </div>
       <section class="spacer">Content</section>

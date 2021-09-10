@@ -69,8 +69,8 @@ new ScrollMagic.Scene({
   .setTween(tl)
   .addIndicators({
     colorTrigger: 'white',
-    colorStart: 'white',
-    colorEnd: 'white',
+    colorStart: 'red',
+    colorEnd: 'red',
     indent: 40,
   })
   .addTo(controller)
