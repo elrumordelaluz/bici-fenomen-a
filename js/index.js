@@ -17,28 +17,28 @@ let scene = new ScrollMagic.Scene({
   .addTo(controller)
 
 const textAnim = TweenMax.fromTo(text, 3, { opacity: 0 }, { opacity: 1 })
-let scene2 = ScrollMagic.Scene({
-  duration: 3000,
-  triggerElement: intro,
-  triggerHook: 0,
-})
-// .setTween(textAnim)
-// .addTo(controller)
+// let scene2 = ScrollMagic.Scene({
+//   duration: 3000,
+//   triggerElement: intro,
+//   triggerHook: 0,
+// })
+//   .setTween(textAnim)
+//   .addTo(controller)
 
-// let accelAmount = 0.1
+let accelAmount = 0.1
 let scrollPos = 0
 let frameNumber = 0
-let playbackConst = 1000
-// let delay = 0
+let playbackConst = 500
+let delay = 0
 
 scene.on('update', (e) => {
-  scrollPos = e.scrollPos / playbackConst
+  scrollPos = e.scrollPos / 1000
   // video.currentTime = scrollPos
 })
 
-function scrollPlay() {
-  // delay += (scrollPos - delay) * accelAmount
-  video.currentTime = scrollPos
-  window.requestAnimationFrame(scrollPlay)
-}
-window.requestAnimationFrame(scrollPlay)
+// function scrollPlay() {
+//   // delay += (scrollPos - delay) * accelAmount
+//   video.currentTime = scrollPos
+//   window.requestAnimationFrame(scrollPlay)
+// }
+// window.requestAnimationFrame(scrollPlay)
