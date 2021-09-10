@@ -1,0 +1,14 @@
+{
+  "name": "bika",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Lionel Tzatzkin <elrumordelaluz@hotmail.com> (https://elrumordelaluz.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "0.12.1"
+  },
+  "scripts": {
+    "watch": "eleventy --serve --port=1223",
+    "build": "eleventy"
+  }
+}
