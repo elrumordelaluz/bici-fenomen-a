@@ -21,6 +21,7 @@ body {
   outline: 0 !important;
 }
 
+/* 
 .intro {
   width: 100vw !important;
   height: 100vh;
@@ -64,11 +65,97 @@ body {
 
 section {
   height: 100vw;
-  /* color: black; */
 }
 
 section h1 {
-  /* padding-top: 300px; */
   text-align: center;
   font-size: 85px;
+} */
+
+#pinContainer {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+section,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+#pinMaster {
+  position: relative;
+}
+
+footer {
+  height: 100px;
+  background-color: gray;
+}
+
+.intro {
+  position: relative;
+  height: 100vh;
+  background-color: #42a6e0;
+}
+
+.intro-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-texts {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.intro-title,
+.intro-subtitle {
+  color: white;
+  margin: 0;
+  line-height: 1;
+  font-size: calc(
+    calc(var(--min) * 1px) + calc(var(--max) - var(--min)) *
+      ((100vw - 400px) / (1600 - 400))
+  );
+}
+.intro-subtitle {
+  --min: 40;
+  --max: 70;
+}
+.intro-title {
+  --min: 85;
+  --max: 160;
+  font-size: 85px;
+}
+
+.spacer {
+  height: 100vh;
+  background-color: #42a6e0;
+}
+
+.dark {
+  background-color: #262626;
+}
+.turqoise {
+  background-color: #38ced7;
+}
+.brown {
+  background-color: #a66f28;
+}
+.bordeaux {
+  background-color: #953543;
 }
