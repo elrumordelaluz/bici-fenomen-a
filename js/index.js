@@ -36,6 +36,21 @@ sinusoidalTL.fromTo(
   { opacity: 1, ease: Linear.easeNone },
   '+=.1'
 )
+const derivadaTL = new TimelineMax()
+derivadaTL.fromTo(
+  '.boceto-derivada',
+  1,
+  { opacity: 1 },
+  { opacity: 0.1, ease: Linear.easeNone },
+  '+=1'
+)
+derivadaTL.fromTo(
+  '.texts__derivada',
+  1.5,
+  { opacity: 0 },
+  { opacity: 1, ease: Linear.easeNone },
+  '+=.1'
+)
 
 new ScrollMagic.Scene({
   triggerElement: '#pinVectorial',
@@ -44,12 +59,6 @@ new ScrollMagic.Scene({
 })
   .setPin('#pinVectorial')
   .setTween(vectorialTL)
-  .addIndicators({
-    colorTrigger: 'white',
-    colorStart: 'red',
-    colorEnd: 'red',
-    indent: 40,
-  })
   .addTo(controller)
 
 new ScrollMagic.Scene({
@@ -59,6 +68,15 @@ new ScrollMagic.Scene({
 })
   .setPin('#pinSinusoidal')
   .setTween(sinusoidalTL)
+  .addTo(controller)
+
+new ScrollMagic.Scene({
+  triggerElement: '#pinDerivada',
+  triggerHook: 'onLeave',
+  duration: '100%',
+})
+  .setPin('#pinDerivada')
+  .setTween(derivadaTL)
   .addIndicators({
     colorTrigger: 'white',
     colorStart: 'red',

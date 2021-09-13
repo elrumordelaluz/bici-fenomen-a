@@ -47,7 +47,7 @@ footer {
 
 footer {
   height: 100px;
-  background-color: gray;
+  background-color: black;
 }
 
 .intro {
@@ -90,11 +90,11 @@ footer {
   );
 }
 .subtitle {
-  --min: 40;
+  --min: 34;
   --max: 70;
 }
 .title {
-  --min: 85;
+  --min: 67;
   --max: 160;
 }
 .text {
@@ -107,6 +107,17 @@ footer {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+.section-dark {
+  background: black;
+}
+
+.section-dark .subtitle {
+  color: #fff;
+}
+
+.last-quote {
+  display: block;
 }
 
 .section-video {
@@ -142,7 +153,7 @@ footer {
 }
 
 .logo {
-  width: 120px;
+  width: 100px;
   height: auto;
 }
 
@@ -177,9 +188,22 @@ footer {
 }
 
 .boceto-vectorial,
-.boceto-sinusoidal {
+.boceto-sinusoidal,
+.boceto-derivada {
   height: 100%;
   object-fit: contain;
+}
+
+.boceto-sinusoidal-fixed {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+}
+.boceto-derivada-fixed {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin-bottom: 1em;
 }
 
 .btn {
@@ -207,18 +231,22 @@ footer {
 }
 
 .texts__vectorial,
-.texts__sinusoidal {
+.texts__sinusoidal,
+.texts__derivada {
   color: black;
 }
 .texts__vectorial .subtitle {
   --max: 46;
 }
-.texts__vectorial .text {
+.texts__vectorial .text,
+.texts__sinusoidal .text,
+.texts__derivada .text {
   font-family: 'Lato', sans-serif;
+  margin-top: 2em;
 }
 
 .quote {
-  max-width: 50%;
+  max-width: 70vw;
   margin: 100px auto;
   text-align: center;
 }
@@ -229,7 +257,16 @@ blockquote p {
 blockquote p {
   margin-bottom: 0.4em;
 }
+
+blockquote::after {
+  content: '“';
+}
 figcaption {
   font-family: 'Lato', sans-serif;
   font-size: 0.3em;
+}
+
+.ig {
+  width: 34px;
+  height: 34px;
 }
