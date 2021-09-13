@@ -46,19 +46,33 @@
 var controller = new ScrollMagic.Controller()
 var tl = new TimelineMax()
 tl.fromTo(
-  'section.panel.turqoise',
+  '.boceto-vectorial',
   1,
-  { xPercent: 100 },
-  { xPercent: 0, ease: Linear.easeNone },
+  { opacity: 1 },
+  { opacity: 0.1, ease: Linear.easeNone },
   '+=1'
 )
 tl.fromTo(
-  'section.panel.bordeaux',
-  1,
-  { yPercent: 100 },
-  { yPercent: 0, ease: Linear.easeNone },
-  '+=1'
+  '.texts__vectorial',
+  1.5,
+  { opacity: 0 },
+  { opacity: 1, ease: Linear.easeNone },
+  '+=.1'
 )
+// tl.fromTo(
+//   'section.panel.turqoise',
+//   1,
+//   { xPercent: 100 },
+//   { xPercent: 0, ease: Linear.easeNone },
+//   '+=1'
+// )
+// tl.fromTo(
+//   'section.panel.bordeaux',
+//   1,
+//   { yPercent: 100 },
+//   { yPercent: 0, ease: Linear.easeNone },
+//   '+=1'
+// )
 
 new ScrollMagic.Scene({
   triggerElement: '#pinMaster',

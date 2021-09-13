@@ -21,57 +21,6 @@ body {
   outline: 0 !important;
 }
 
-/* 
-.intro {
-  width: 100vw !important;
-  height: 100vh;
-}
-
-.intro video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.texts {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.texts-intro {
-  text-align: center;
-}
-
-.texts-intro > .text {
-  color: white;
-  margin: 0;
-  line-height: 1;
-  font-size: calc(
-    calc(var(--min) * 1px) + calc(var(--max) - var(--min)) *
-      ((100vw - 400px) / (1600 - 400))
-  );
-}
-.kind {
-  --min: 40;
-  --max: 70;
-}
-.name {
-  --min: 85;
-  --max: 160;
-  font-size: 85px;
-}
-
-section {
-  height: 100vw;
-}
-
-section h1 {
-  text-align: center;
-  font-size: 85px;
-} */
-
 #pinContainer {
   width: 100%;
   height: 100vh;
@@ -120,7 +69,6 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-family: 'Abril Fatface', cursive;
   color: white;
 }
 .quote-texts {
@@ -129,6 +77,11 @@ footer {
 
 .title,
 .subtitle {
+  font-family: 'Abril Fatface', cursive;
+}
+.title,
+.subtitle,
+.text {
   margin: 0;
   line-height: 1;
   font-size: calc(
@@ -143,12 +96,24 @@ footer {
 .title {
   --min: 85;
   --max: 160;
-  font-size: 85px;
+}
+.text {
+  --min: 14;
+  --max: 20;
+  line-height: 1.24;
 }
 
-.spacer {
-  height: 100vh;
-  background-color: #42a6e0;
+.section-raw {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-video {
+  border: 10px solid;
+  background: black;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .dark {
@@ -216,6 +181,52 @@ footer {
   object-fit: contain;
 }
 
+.btn {
+  border: 1px solid;
+  border-color: currentColor;
+  font: inherit;
+  font-family: 'Lato', sans-serif;
+  padding: 0.7em 1.2em;
+  border-radius: 2em;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.intro-btn {
+  color: white;
+  margin-top: 1.5em;
+}
+
+.intro-btn:hover {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
+
+.texts__vectorial {
+  color: black;
+}
+.texts__vectorial .subtitle {
+  --max: 46;
+}
+.texts__vectorial .text {
+  font-family: 'Lato', sans-serif;
+}
+
+.quote {
+  max-width: 50%;
+  margin: 100px auto;
+  text-align: center;
+}
+blockquote,
+blockquote p {
+  margin: 0;
+}
+blockquote p {
+  margin-bottom: 0.4em;
+}
 figcaption {
   font-family: 'Lato', sans-serif;
   font-size: 0.3em;
