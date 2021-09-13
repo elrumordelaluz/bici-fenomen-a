@@ -77,10 +77,4 @@ new ScrollMagic.Scene({
 })
   .setPin('#pinDerivada')
   .setTween(derivadaTL)
-  .addIndicators({
-    colorTrigger: 'white',
-    colorStart: 'red',
-    colorEnd: 'red',
-    indent: 40,
-  })
   .addTo(controller)
