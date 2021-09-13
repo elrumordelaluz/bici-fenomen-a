@@ -110,6 +110,7 @@ footer {
 }
 .section-dark {
   background: black;
+  padding-top: 100px;
 }
 
 .section-dark .subtitle {
