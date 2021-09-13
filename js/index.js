@@ -1,86 +1,64 @@
-// const intro = document.querySelector('.intro')
-// const video = intro.querySelector('video')
-// const text = intro.querySelector('h1')
+const introButton = document.querySelector('.intro-btn')
 
-// const section = document.querySelector('.section')
-// const end = section.querySelector('h2')
+introButton.addEventListener('click', () => {
+  const pin = document.querySelector('#pinVectorial')
+  pin.scrollIntoView({ behavior: 'smooth' })
+})
 
-// const controller = new ScrollMagic.Controller()
-
-// let scene = new ScrollMagic.Scene({
-//   duration: 9000,
-//   triggerElement: intro,
-//   triggerHook: 0,
-// })
-//   .addIndicators()
-//   .setPin(intro)
-//   .addTo(controller)
-
-// const textAnim = TweenMax.fromTo(text, 3, { opacity: 0 }, { opacity: 1 })
-// // let scene2 = ScrollMagic.Scene({
-// //   duration: 3000,
-// //   triggerElement: intro,
-// //   triggerHook: 0,
-// // })
-// //   .setTween(textAnim)
-// //   .addTo(controller)
-
-// let accelAmount = 0.1
-// let scrollPos = 0
-// let frameNumber = 0
-// let playbackConst = 500
-// let delay = 0
-
-// scene.on('update', (e) => {
-//   scrollPos = e.scrollPos / 1000
-//   // video.currentTime = scrollPos
-// })
-
-// // function scrollPlay() {
-// //   // delay += (scrollPos - delay) * accelAmount
-// //   video.currentTime = scrollPos
-// //   window.requestAnimationFrame(scrollPlay)
-// // }
-// // window.requestAnimationFrame(scrollPlay)
-
-var controller = new ScrollMagic.Controller()
-var tl = new TimelineMax()
-tl.fromTo(
+const controller = new ScrollMagic.Controller()
+const vectorialTL = new TimelineMax()
+vectorialTL.fromTo(
   '.boceto-vectorial',
   1,
   { opacity: 1 },
   { opacity: 0.1, ease: Linear.easeNone },
   '+=1'
 )
-tl.fromTo(
+vectorialTL.fromTo(
   '.texts__vectorial',
   1.5,
   { opacity: 0 },
   { opacity: 1, ease: Linear.easeNone },
   '+=.1'
 )
-// tl.fromTo(
-//   'section.panel.turqoise',
-//   1,
-//   { xPercent: 100 },
-//   { xPercent: 0, ease: Linear.easeNone },
-//   '+=1'
-// )
-// tl.fromTo(
-//   'section.panel.bordeaux',
-//   1,
-//   { yPercent: 100 },
-//   { yPercent: 0, ease: Linear.easeNone },
-//   '+=1'
-// )
+const sinusoidalTL = new TimelineMax()
+sinusoidalTL.fromTo(
+  '.boceto-sinusoidal',
+  1,
+  { opacity: 1 },
+  { opacity: 0.1, ease: Linear.easeNone },
+  '+=1'
+)
+sinusoidalTL.fromTo(
+  '.texts__sinusoidal',
+  1.5,
+  { opacity: 0 },
+  { opacity: 1, ease: Linear.easeNone },
+  '+=.1'
+)
 
 new ScrollMagic.Scene({
-  triggerElement: '#pinMaster',
+  triggerElement: '#pinVectorial',
   triggerHook: 'onLeave',
   duration: '100%',
 })
-  .setPin('#pinMaster')
-  .setTween(tl)
+  .setPin('#pinVectorial')
+  .setTween(vectorialTL)
+  .addIndicators({
+    colorTrigger: 'white',
+    colorStart: 'red',
+    colorEnd: 'red',
+    indent: 40,
+  })
+  .addTo(controller)
+
+new ScrollMagic.Scene({
+  triggerElement: '#pinSinusoidal',
+  triggerHook: 'onLeave',
+  duration: '100%',
+})
+  .setPin('#pinSinusoidal')
+  .setTween(sinusoidalTL)
   .addIndicators({
     colorTrigger: 'white',
     colorStart: 'red',

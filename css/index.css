@@ -176,7 +176,8 @@ footer {
   opacity: 1;
 }
 
-.boceto-vectorial {
+.boceto-vectorial,
+.boceto-sinusoidal {
   height: 100%;
   object-fit: contain;
 }
@@ -205,7 +206,8 @@ footer {
   border-color: white;
 }
 
-.texts__vectorial {
+.texts__vectorial,
+.texts__sinusoidal {
   color: black;
 }
 .texts__vectorial .subtitle {
