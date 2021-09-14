@@ -1,7 +1,7 @@
 const introButton = document.querySelector('.intro-btn')
 
 introButton.addEventListener('click', () => {
-  const pin = document.querySelector('#pinVectorial')
+  const pin = document.querySelector('#first-section')
   pin.scrollIntoView({ behavior: 'smooth' })
 })
 
