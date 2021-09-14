@@ -306,10 +306,12 @@ figcaption {
 
 .embed-container {
   position: relative;
-  padding-bottom: 56.25%;
+
   height: 0;
   overflow: hidden;
   width: 600px;
+  height: auto;
+  aspect-ratio: 16 / 9;
   max-width: calc(100% - 40px);
 }
 
@@ -322,9 +324,3 @@ figcaption {
   width: 100%;
   height: 100%;
 }
-
-/* @media (hover: hover) {
-  .stop-motion-wrapper {
-    display: flex;
-  }
-} */

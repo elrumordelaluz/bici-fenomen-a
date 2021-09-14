@@ -81,60 +81,60 @@ new ScrollMagic.Scene({
   .setTween(derivadaTL)
   .addTo(controller)
 
-const canvas = document.getElementById('canvas')
-const context = canvas.getContext('2d')
+// const canvas = document.getElementById('canvas')
+// const context = canvas.getContext('2d')
 
-const intial = 1
-const frameCount = 163
-const currentFrame = (index) =>
-  `./img/stop-motion/vectorial_${index.toString()}.jpg`
+// const intial = 1
+// const frameCount = 163
+// const currentFrame = (index) =>
+//   `./img/stop-motion/vectorial_${index.toString()}.jpg`
 
-const fenomena = {
-  frame: intial,
-}
+// const fenomena = {
+//   frame: intial,
+// }
 
-const img = new Image()
-img.src = currentFrame(intial)
-canvas.width = 915
-canvas.height = 686
-img.onload = function () {
-  context.drawImage(img, 0, 0)
-}
+// const img = new Image()
+// img.src = currentFrame(intial)
+// canvas.width = 915
+// canvas.height = 686
+// img.onload = function () {
+//   context.drawImage(img, 0, 0)
+// }
 
-const canvasTL = new TimelineMax()
+// const canvasTL = new TimelineMax()
 
-canvasTL.to(fenomena, {
-  frame: frameCount - 1,
-  snap: 'frame',
-  onUpdate: render,
-})
+// canvasTL.to(fenomena, {
+//   frame: frameCount - 1,
+//   snap: 'frame',
+//   onUpdate: render,
+// })
 
-new ScrollMagic.Scene({
-  triggerElement: '#pinCanvas',
-  triggerHook: 'onLeave',
-  duration: '300%',
-})
-  .setPin('#pinCanvas')
-  .setTween(canvasTL)
-  .addTo(controller)
+// new ScrollMagic.Scene({
+//   triggerElement: '#pinCanvas',
+//   triggerHook: 'onLeave',
+//   duration: '300%',
+// })
+//   .setPin('#pinCanvas')
+//   .setTween(canvasTL)
+//   .addTo(controller)
 
-function render() {
-  img.src = currentFrame(fenomena.frame)
-  context.drawImage(img, 0, 0)
-}
+// function render() {
+//   img.src = currentFrame(fenomena.frame)
+//   context.drawImage(img, 0, 0)
+// }
 
-const preloadImages = () => {
-  for (let i = 1; i < frameCount; i++) {
-    const img = new Image()
-    img.src = currentFrame(i)
-  }
-  console.log(gsap)
-  gsap.fromTo(
-    '.stop-motion-wrapper',
-    1,
-    { display: 'none' },
-    { display: 'flex' }
-  )
-}
+// const preloadImages = () => {
+//   for (let i = 1; i < frameCount; i++) {
+//     const img = new Image()
+//     img.src = currentFrame(i)
+//   }
 
-preloadImages()
+//   gsap.fromTo(
+//     '.stop-motion-wrapper',
+//     1,
+//     { display: 'none' },
+//     { display: 'flex' }
+//   )
+// }
+
+// preloadImages()
