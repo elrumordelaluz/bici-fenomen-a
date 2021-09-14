@@ -273,7 +273,7 @@ figcaption {
 }
 
 .stop-motion-wrapper {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -310,7 +310,7 @@ figcaption {
   height: 0;
   overflow: hidden;
   width: 600px;
-  max-width: 100%;
+  max-width: calc(100% - 40px);
 }
 
 .embed-container iframe,
@@ -325,6 +325,6 @@ figcaption {
 
 @media (hover: hover) {
   .stop-motion-wrapper {
-    display: none;
+    display: flex;
   }
 }
