@@ -128,4 +128,13 @@ const preloadImages = () => {
     const img = new Image()
     img.src = currentFrame(i)
   }
+  console.log(gsap)
+  gsap.fromTo(
+    '.stop-motion-wrapper',
+    1,
+    { display: 'none' },
+    { display: 'flex' }
+  )
 }
+
+preloadImages()

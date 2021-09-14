@@ -273,7 +273,7 @@ figcaption {
 }
 
 .stop-motion-wrapper {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -323,8 +323,8 @@ figcaption {
   height: 100%;
 }
 
-@media (hover: hover) {
+/* @media (hover: hover) {
   .stop-motion-wrapper {
     display: flex;
   }
-}
+} */
