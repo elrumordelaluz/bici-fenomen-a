@@ -306,6 +306,13 @@ figcaption {
   object-fit: cover;
 }
 
+.stop-motion-parent .text {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 1em;
+  text-align: center;
+  font-size: 14px;
+}
+
 .embed-container {
   position: relative;
 
