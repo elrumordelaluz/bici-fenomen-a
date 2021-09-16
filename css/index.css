@@ -271,6 +271,21 @@ figcaption {
   width: 34px;
   height: 34px;
 }
+.ig:hover > svg stop:nth-child(1) {
+  stop-color: #8e40b7;
+}
+.ig:hover > svg stop:nth-child(2) {
+  stop-color: #fc2b82;
+}
+.ig:hover > svg stop:nth-child(3) {
+  stop-color: #ff5445;
+}
+.ig:hover > svg stop:nth-child(4) {
+  stop-color: #ffb140;
+}
+.ig svg stop {
+  transition: 0.4s ease;
+}
 
 .stop-motion-wrapper {
   display: flex;
