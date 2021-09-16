@@ -87,7 +87,9 @@ const context = canvas.getContext('2d')
 const intial = 1
 const frameCount = 163
 const currentFrame = (index) =>
-  `./img/stop-motion/vectorial_${index.toString()}.jpg`
+  `https://res.cloudinary.com/elrumordelaluz/image/upload/v1631799117/fenomenas.bike/vectorial-${(
+    index - 1
+  ).toString()}.jpg`
 
 const fenomena = {
   frame: intial,
