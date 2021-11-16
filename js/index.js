@@ -81,6 +81,25 @@ new ScrollMagic.Scene({
   .setTween(derivadaTL)
   .addTo(controller)
 
+document.addEventListener(
+  'DOMContentLoaded',
+  () => {
+    const urlSearchParams = new URLSearchParams(window.location.search)
+    const params = Object.fromEntries(urlSearchParams.entries())
+
+    if (
+      params.licenciado ||
+      params.licenciao ||
+      params.lic ||
+      params.digamelicenciado
+    ) {
+      confetti.start()
+      setTimeout(() => confetti.stop(), 8500)
+    }
+  },
+  false
+)
+
 // const canvas = document.getElementById('canvas')
 // const context = canvas.getContext('2d')
 
