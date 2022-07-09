@@ -91,10 +91,12 @@ document.addEventListener(
       params.licenciado ||
       params.licenciao ||
       params.lic ||
-      params.digamelicenciado
+      params.digamelicenciado ||
+      params.auguri ||
+      params.felizcumple
     ) {
       confetti.start()
-      setTimeout(() => confetti.stop(), 8500)
+      // setTimeout(() => confetti.stop(), 8500)
     }
   },
   false
